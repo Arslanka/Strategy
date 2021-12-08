@@ -11,11 +11,11 @@ public class Main {
         int b = scanner.nextInt();
         scanner.nextLine();
         String action = scanner.nextLine();
-        if (Objects.equals(action, "Add"))
+        if (action.equals("Add"))
             context.setStrategy(new ConcreteStrategyAdd());
-        else if (Objects.equals(action, "Subtract"))
+        else if (action.equals("Subtract"))
             context.setStrategy(new ConcreteStrategySubtract());
-        else if (Objects.equals(action, "Multiply"))
+        else if (action.equals("Multiply"))
             context.setStrategy(new ConcreteStrategyMultiply());
         else {
             System.out.println("There is no such operation\n");
