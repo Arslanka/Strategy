@@ -5,7 +5,7 @@ public class Alcove extends Building {
         super(name);
     }
     @Override
-    public void environment() {
+    public void printEnvironment() {
         System.out.println(getName() + " украшена цветами.");
     }
     @Override

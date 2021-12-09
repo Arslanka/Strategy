@@ -2,23 +2,27 @@ package Other;
 
 abstract class Place {
     private final String name;
+
     Place(String name) {
         this.name = name;
     }
+
     public String getName() {
         return name;
     }
-    public void environment() {
-        System.out.println("Поблизости ничего нет.");
-    }
+
+    public abstract void printEnvironment();
+    //abstract methods <->
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
-        if (obj instanceof Place){
-            return name.equals(((Place)obj).getName());
+        if (obj instanceof Place) {
+            return name.equals(((Place) obj).getName());
         }
         return false;
     }
+
     @Override
     public int hashCode() {
         int hash = 3;
